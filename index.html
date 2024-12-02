@@ -16,11 +16,28 @@
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script type="text/babel">
 		function Banner(){
-			const title = 'store price🏷'
+			const title = 'store price🏷';
 			return(<h1>{title.toUpperCase()}</h1>);
+		};
+
+		function Cart(){
+			const penPrice = 1;
+			const bookPrice = 20;
+			const pencilPrice = 2;
+			return(
+				<div>
+					<h2>Panier</h2>
+					<ul>
+						<li>Bic: {penPrice}€</li>
+						<li>Livre: {bookPrice}€</li>
+						<li>Crayon: {pencilPrice}€</li>
+					</ul>
+					total: {penPrice + bookPrice + pencilPrice}€
+				</div>
+			)
 		}
 
-		ReactDOM.render(<Banner />,document.getElementById('root'))
+		ReactDOM.render(<div><Banner /><Cart /></div>,document.getElementById('root'))
 	</script>
 	
 </body>
