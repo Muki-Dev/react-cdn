@@ -14,7 +14,14 @@
 
 	<!-- babel -->
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-	<script type="text/babel"></script>
+	<script type="text/babel">
+		function Banner(){
+			const title = 'store price🏷'
+			return(<h1>{title.toUpperCase()}</h1>);
+		}
+
+		ReactDOM.render(<Banner />,document.getElementById('root'))
+	</script>
 	
 </body>
 </html>
